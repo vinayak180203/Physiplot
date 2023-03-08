@@ -1,0 +1,61 @@
+html {
+    background-color: #E4E9FD;
+    background-image: -webkit-linear-gradient(65deg, #b9b9b9 50%, #060029 50%);
+    min-height: 1000px;
+    font-family: 'helvetica neue';
+  }
+  
+h1 {
+    color: #fff;
+    padding: 5px 10px 10px 10px;
+}
+
+h3{
+    color: #fff;
+    padding: 5px 10px 10px 10px;
+    text-align: center;
+}
+#heading {
+    font-size: 300%;
+    text-align: center;
+  }
+
+img{
+    width: 500px;
+    height: 300px;
+    border-radius: 4px;
+}
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 45%;
+    padding: 5px 5px 5px 55px;
+  }
+  
+  /* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+    align-items: center;
+  }
+
+/* unvisited link */
+a:link {
+    color: rgba(255, 0, 0, 0);
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgba(0, 128, 0, 0);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(255, 255, 255);
+  }
+  
+  /* selected link */
+  a:active {
+    color: rgba(0, 0, 255, 0);
+  }
