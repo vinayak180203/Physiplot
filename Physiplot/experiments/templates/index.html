@@ -1,34 +1,35 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" type="" href="css/style.css">
+    <link rel="stylesheet" type="" href="{% static 'css/style.css' %}">
 </head>
-<body>
+<body background="{% static 'images/1.png' %}">
     <h1 id="heading">PHYSIPLOT</h1>
     
     <div class="row">
         <div class="column">
-          <img src="images/doppler_effect.jpg" alt="Snow" >
+          <img src="{%static 'images/doppler_effect.jpg' %}" alt="Snow" >
           <a href="Doppler/index.html"><h3>Doppler Effect</h3></a>
         </div>
         
         <div class="column">
-          <img src="images/doppler_effect.jpg" alt="Mountains" >
+          <img src="{%static 'images/doppler_effect.jpg' %}" alt="Mountains" >
           <a href="Michael_infrared/index.html"><h3> Michael Infrared</h3></a>
 
         </div>
     </div>
     <div class="row">
         <div class="column">
-          <img src="images/doppler_effect.jpg" alt="Snow" >
+          <img src="{%static 'images/doppler_effect.jpg' %}" alt="Snow" >
           <a href="Doppler/index.html"><h3>Doppler Effect</h3></a>
 
         </div>
         
         <div class="column">
-          <img src="images/doppler_effect.jpg" alt="Mountains" >
+          <img src="{%static 'images/doppler_effect.jpg' %}" alt="Mountains" >
           <a href="Doppler/index.html"><h3>Doppler Effect</h3></a>
 
         </div>
