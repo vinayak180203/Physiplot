@@ -1,12 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Untitled</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Doppler effect result</title>
+    <link rel="stylesheet" href="{%static 'Dopplerresult_assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{%static 'Dopplerresult_assets/css/styles.css' %}">
 </head>
 
 <body class="text-center" style="background: rgb(0,2,45);">
@@ -21,63 +22,63 @@
             </thead>
             <tbody>
                 <tr style="width: 273px;color: rgb(218,218,218);">
-                    <td>1</td>
+                    <td>{{ t1 }}</td>
                     <td>Cell 2</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
-                    <td>2</td>
+                    <td>{{ t2 }}</td>
                     <td>Cell 2</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
-                    <td>3</td>
+                    <td>{{ t3 }}</td>
                     <td>Cell 2</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
-                    <td>4</td>
+                    <td>{{ t4 }}</td>
                     <td>Cell 2</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
-                    <td>5</td>
+                    <td>{{ t5 }}</td>
                     <td>Cell 2</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
-                    <td>6</td>
+                    <td>{{ t6 }}</td>
                     <td>Cell 2</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
-                    <td>7</td>
+                    <td>{{ t7 }}</td>
                     <td>Cell 2</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
-                    <td>8</td>
+                    <td>{{ t8 }}</td>
                     <td>Cell 2</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
-                    <td>9</td>
+                    <td>{{ t9 }}</td>
                     <td>Cell 2</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
-                    <td>10</td>
+                    <td>{{ t10 }}</td>
                     <td>Cell 2</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
-                    <td>11</td>
+                    <td>{{ t11 }}</td>
                     <td>Cell 2</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
-                    <td>12</td>
+                    <td>{{ t12 }}</td>
                     <td>Cell 2</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
-                    <td>13</td>
+                    <td>{{ t13 }}</td>
                     <td>Cell 2</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
-                    <td>14</td>
+                    <td>{{ t14 }}</td>
                     <td>Cell 2</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
-                    <td>15</td>
+                    <td>{{ t15 }}</td>
                     <td>Cell 2</td>
                 </tr>
             </tbody>
@@ -85,11 +86,11 @@
     </div>
     <div class="container" style="margin: 30px 100px;">
         <div class="row">
-            <div class="col-md-6"><img src="assets/img/4-Figure3-1.png" style="width: 40vw;"></div>
-            <div class="col-md-6"><img src="assets/img/4-Figure3-1.png" style="width: 40vw;"></div>
+            <div class="col-md-6"><img src="{%static 'Dopplerresult_assets/img/4-Figure3-1.png' %}" style="width: 40vw;"></div>
+            <div class="col-md-6"><img src="{%static 'Dopplerresult_assets/img/4-Figure3-1.png' %}" style="width: 40vw;"></div>
         </div>
     </div>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{%static 'Dopplerresult_assets/bootstrap/js/bootstrap.min.js' %}"></script>
 </body>
 
 </html>
