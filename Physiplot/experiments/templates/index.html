@@ -3,35 +3,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Physiplot</title>
     <link rel="stylesheet" type="" href="{% static 'css/style.css' %}">
+    <style>
+      body {
+        background-image: url("{% static 'images/1.png' %}");
+        background-position: center center; 
+        background-repeat: no-repeat;
+        background-size: cover; 
+        margin-top: -32px; 
+      }
+      h1 h3{
+        color: black;
+      }
+    </style>
 </head>
-<body background="{% static 'images/1.png' %}">
+<body>
     <h1 id="heading">PHYSIPLOT</h1>
     
     <div class="row">
         <div class="column">
           <img src="{%static 'images/doppler_effect.jpg' %}" alt="Snow" >
-          <a href="Doppler/index.html"><h3>Doppler Effect</h3></a>
+          <a href="doppler/"><h3>Doppler Effect</h3></a>
         </div>
         
         <div class="column">
           <img src="{%static 'images/doppler_effect.jpg' %}" alt="Mountains" >
           <a href="Michael_infrared/index.html"><h3> Michael Infrared</h3></a>
-
         </div>
     </div>
     <div class="row">
         <div class="column">
           <img src="{%static 'images/doppler_effect.jpg' %}" alt="Snow" >
           <a href="Doppler/index.html"><h3>Doppler Effect</h3></a>
-
         </div>
         
         <div class="column">
           <img src="{%static 'images/doppler_effect.jpg' %}" alt="Mountains" >
           <a href="Doppler/index.html"><h3>Doppler Effect</h3></a>
-
         </div>
     </div>
 </body>

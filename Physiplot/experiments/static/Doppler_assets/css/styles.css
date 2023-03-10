@@ -1,0 +1,29 @@
+td {
+  background: var(--bs-orange);
+}
+
+html {
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(65deg, #b9b9b9 50%, #060029 50%);
+  min-height: 1000px;
+  font-family: 'helvetica neue';
+}
+
+a:link {
+  color: rgb(0, 0, 0);
+}
+
+/* visited link */
+a:visited {
+  color: rgba(0, 128, 0, 0);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(255, 255, 255);
+}
+
+/* selected link */
+a:active {
+  color: rgba(0, 0, 255, 0);
+}
