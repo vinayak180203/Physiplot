@@ -45,3 +45,4 @@ def doppler(request):
     else:
         template = loader.get_template('Dopplerinput.html')
         return HttpResponse(template.render())
+    
