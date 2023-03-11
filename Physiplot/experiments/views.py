@@ -46,3 +46,19 @@ def doppler(request):
         template = loader.get_template('Dopplerinput.html')
         return HttpResponse(template.render())
     
+def infrared(request):
+    template = loader.get_template('Michael_Infraredindex.html')
+    return HttpResponse(template.render())
+
+def calibrationconstant(request):
+    template = loader.get_template('calibration_constantinput.html')
+    return HttpResponse(template.render())  
+
+def refractiveindex(request):
+    template = loader.get_template('refractive_indexinput.html')
+    return HttpResponse(template.render())  
+
+def wavelength(request):
+    template = loader.get_template('wavelengthinput.html')
+    return HttpResponse(template.render())  
+

@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Refractive Index</title>
+    <link rel="stylesheet" href="{%static 'refractiveindex_assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{%static 'refractiveindex_assets/css/styles.css' %}">
+</head>
+
+<body class="text-center" style="background: rgba(0, 2, 45, 0);">
+    <h1 class="text-center" style="color: rgba(255,255,255,0.86);">Michael Infrared</h1>
+    <h3 style="color: rgba(255,255,255,0.67);">Refractive index of Transparent material</h3>
+    <form method="post" action="">
+        {% csrf_token %}
+    <div class="table-responsive text-center justify-content-xl-center align-items-xl-start" style="width: 80vw;height: 300px;color: rgb(255,255,255);margin: 30px 100px;">
+        <table class="table">
+            <thead style="color: rgb(255,255,255);">
+                <tr>
+                    <th>Trial number</th>
+                    <th>Number of Fringes moved(N)</th>
+                    <th>&nbsp; &nbsp; &nbsp;Angle Rotated&nbsp; &nbsp;Left</th>
+                    <th><strong>&nbsp; &nbsp; &nbsp;Angle Rotated&nbsp; &nbsp;Right</strong></th>
+                    <th>Mean.&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="width: 273px;color: rgb(218,218,218);">
+                    <td>1</td>
+                    <td><label for="n1">N<sub>1</sub></label><input type="number" name="n1" required id="n1"></td>
+                    <td><label for="l1">l<sub>1</sub></label><input type="number" name="l1" required id="l1"></td>
+                    <td><label for="r1">r<sub>1</sub></label><input type="number" name="r1" required id="r1"></td>
+                    <td><label for="m1">M<sub>1</sub></label><input type="number" name="m1" required id="m1"></td>
+                </tr>
+                <tr style="width: 273px;color: rgb(218,218,218);">
+                    <td>2</td>
+                    <td><label for="n2">N<sub>2</sub></label><input type="number" name="n2" required id="n2"></td>
+                    <td><label for="l2">l<sub>2</sub></label><input type="number" name="l2" required id="l2"></td>
+                    <td><label for="r2">r<sub>2</sub></label><input type="number" name="r2" required id="r2"></td>
+                    <td><label for="m2">M<sub>2</sub></label><input type="number" name="m2" required id="m2"></td>
+                </tr>
+                <tr style="width: 273px;color: rgb(218,218,218);">
+                    <td>3</td>
+                    <td><label for="n3">N<sub>3</sub></label><input type="number" name="n3" required id="n3"></td>
+                    <td><label for="l3">l<sub>3</sub></label><input type="number" name="l3" required id="l3"></td>
+                    <td><label for="r3">r<sub>3</sub></label><input type="number" name="r3" required id="r3"></td>
+                    <td><label for="m3">M<sub>3</sub></label><input type="number" name="m3" required id="m3"></td>
+                </tr>
+                <tr style="width: 273px;color: rgb(218,218,218);">
+                    <td>4</td>
+                    <td><label for="n4">N<sub>4</sub></label><input type="number" name="n4" required id="n4"></td>
+                    <td><label for="l4">l<sub>4</sub></label><input type="number" name="l4" required id="l4"></td>
+                    <td><label for="r4">r<sub>4</sub></label><input type="number" name="r4" required id="r4"></td>
+                    <td><label for="m4">M<sub>4</sub></label><input type="number" name="m4" required id="m4"></td>
+                </tr>
+                <tr style="width: 273px;color: rgb(218,218,218);">
+                    <td>5</td>
+                    <td><label for="n5">N<sub>5</sub></label><input type="number" name="n5" required id="n5"></td>
+                    <td><label for="l5">l<sub>5</sub></label><input type="number" name="l5" required id="l5"></td>
+                    <td><label for="r5">r<sub>5</sub></label><input type="number" name="r5" required id="r5"></td>
+                    <td><label for="m5">M<sub>5</sub></label><input type="number" name="m5" required id="m5"></td>
+                </tr>
+                <tr style="width: 273px;color: rgb(218,218,218);">
+                    <td>6</td>
+                    <td><label for="n6">N<sub>6</sub></label><input type="number" name="n6" required id="n6"></td>
+                    <td><label for="l6">l<sub>6</sub></label><input type="number" name="l6" required id="l6"></td>
+                    <td><label for="r6">r<sub>6</sub></label><input type="number" name="r6" required id="r6"></td>
+                    <td><label for="m6">M<sub>6</sub></label><input type="number" name="m6" required id="m6"></td>
+                </tr>
+                <tr style="width: 273px;color: rgb(218,218,218);">
+                    <td>7</td>
+                    <td><label for="n7">N<sub>7</sub></label><input type="number" name="n7" required id="n7"></td>
+                    <td><label for="l7">l<sub>7</sub></label><input type="number" name="l7" required id="l7"></td>
+                    <td><label for="r7">r<sub>7</sub></label><input type="number" name="r7" required id="r7"></td>
+                    <td><label for="m7">M<sub>7</sub></label><input type="number" name="m7" required id="m7"></td>
+                </tr>
+                <tr style="width: 273px;color: rgb(218,218,218);">
+                    <td>8</td>
+                    <td><label for="n8">N<sub>8</sub></label><input type="number" name="n8" required id="n8"></td>
+                    <td><label for="l8">l<sub>8</sub></label><input type="number" name="l8" required id="l8"></td>
+                    <td><label for="r8">r<sub>8</sub></label><input type="number" name="r8" required id="r8"></td>
+                    <td><label for="m8">M<sub>8</sub></label><input type="number" name="m8" required id="m8"></td>
+                </tr>
+                <tr style="width: 273px;color: rgb(218,218,218);">
+                    <td>9</td>
+                    <td><label for="n9">N<sub>9</sub></label><input type="number" name="n9" required id="n9"></td>
+                    <td><label for="l9">l<sub>9</sub></label><input type="number" name="l9" required id="l9"></td>
+                    <td><label for="r9">r<sub>9</sub></label><input type="number" name="r9" required id="r9"></td>
+                    <td><label for="m9">M<sub>9</sub></label><input type="number" name="m9" required id="m9"></td>
+                </tr>
+                <tr style="width: 273px;color: rgb(218,218,218);">
+                    <td>10</td>
+                    <td><label for="n10">N<sub>10</sub></label><input type="number" name="n10" required id="n10"></td>
+                    <td><label for="l10">l<sub>10</sub></label><input type="number" name="l10" required id="l10"></td>
+                    <td><label for="r10">r<sub>10</sub></label><input type="number" name="r10" required id="r10"></td>
+                    <td><label for="m10">M<sub>10</sub></label><input type="number" name="m10" required id="m10"></td>
+                </tr>
+                <tr style="width: 273px;color: rgb(218,218,218);">
+                    <td>11</td>
+                    <td><label for="n11">N<sub>11</sub></label><input type="number" name="n11" required id="n11"></td>
+                    <td><label for="l11">l<sub>11</sub></label><input type="number" name="l11" required id="l11"></td>
+                    <td><label for="r11">r<sub>11</sub></label><input type="number" name="r11" required id="r11"></td>
+                    <td><label for="m11">M<sub>11</sub></label><input type="number" name="m11" required id="m11"></td>
+                </tr>
+                <tr style="width: 273px;color: rgb(218,218,218);">
+                    <td>12</td>
+                    <td><label for="n12">N<sub>12</sub></label><input type="number" name="n12" required id="n12"></td>
+                    <td><label for="l12">l<sub>12</sub></label><input type="number" name="l12" required id="l12"></td>
+                    <td><label for="r12">r<sub>12</sub></label><input type="number" name="r12" required id="r12"></td>
+                    <td><label for="m12">M<sub>12</sub></label><input type="number" name="m12" required id="m12"></td>
+                </tr>
+                <tr style="width: 273px;color: rgb(218,218,218);">
+                    <td>13</td>
+                    <td><label for="n13">N<sub>13</sub></label><input type="number" name="n13" required id="n13"></td>
+                    <td><label for="l13">l<sub>13</sub></label><input type="number" name="l13" required id="l13"></td>
+                    <td><label for="r13">r<sub>13</sub></label><input type="number" name="r13" required id="r13"></td>
+                    <td><label for="m13">M<sub>13</sub></label><input type="number" name="m13" required id="m13"></td>
+                </tr>
+                <tr style="width: 273px;color: rgb(218,218,218);">
+                    <td>14</td>
+                    <td><label for="n14">N<sub>14</sub></label><input type="number" name="n14" required id="n14"></td>
+                    <td><label for="l14">l<sub>14</sub></label><input type="number" name="l14" required id="l14"></td>
+                    <td><label for="r14">r<sub>14</sub></label><input type="number" name="r14" required id="r14"></td>
+                    <td><label for="m14">M<sub>14</sub></label><input type="number" name="m14" required id="m14"></td>
+                </tr>
+                <tr style="width: 273px;color: rgb(218,218,218);">
+                    <td>15</td>
+                    <td><label for="n15">N<sub>15</sub></label><input type="number" name="n15" required id="n15"></td>
+                    <td><label for="l15">l<sub>15</sub></label><input type="number" name="l15" required id="l15"></td>
+                    <td><label for="r15">r<sub>15</sub></label><input type="number" name="r15" required id="r15"></td>
+                    <td><label for="m15">M<sub>15</sub></label><input type="number" name="m15" required id="m15"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div><button  class="btn btn-primary" type="button" style="margin: 50px;font-size: 30px;box-shadow: 0px 0px 20px 4px;background: rgb(198,221,255);color: rgb(64,64,64);font-weight: bold;width: 300px;height: 60px;"><a href="Refractive index results/index.html">Submit</a> </button>
+    <script src="{%static 'refractiveindex_assets/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
