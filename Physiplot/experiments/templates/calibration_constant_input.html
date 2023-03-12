@@ -15,15 +15,15 @@
     <h3 style="color: rgba(255,255,255,0.67);">Calcluation of Avg Calibration constant</h3>
     <form method="post" action="">
         {% csrf_token %}
+        <label for="wavelength" style="color: white;">Wavelength of laser beam (in nm) = </label><input type="number" name = 'wavelength' required id="wavelength">
     <div class="table-responsive text-center justify-content-xl-center align-items-xl-start" style="width: 80vw;height: 300px;color: rgb(255,255,255);margin: 30px 100px;">
         <table class="table">
             <thead style="color: rgb(255,255,255);">
                 <tr>
                     <th>Trial number</th>
                     <th>Number of Fringes(N)</th>
-                    <th>Micrometer reading initial</th>
+                    <th>Micrometer reading Initial</th>
                     <th><strong>Micrometer reading Final</strong></th>
-                    <th>Distance moved (d)mm</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,109 +32,94 @@
                     <td><label for="n1">N<sub>1</sub></label><input type="number" name="n1" required id="n1"></td>
                     <td><label for="m1i">m<sub>1i</sub></label><input type="number" name="m1i" required id="m1i"></td>
                     <td><label for="m1f">m<sub>1f</sub></label><input type="number" name="m1f" required id="m1f"></td>
-                    <td><label for="d1">d<sub>1</sub></label><input type="number" name="d1" required id="d1"></td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>2</td>
                     <td><label for="n2">N<sub>2</sub></label><input type="number" name="n2" required id="n2"></td>
                     <td><label for="m2i">m<sub>2i</sub></label><input type="number" name="m2i" required id="m2i"></td>
                     <td><label for="m2f">m<sub>2f</sub></label><input type="number" name="m2f" required id="m2f"></td>
-                    <td><label for="d2">d<sub>2</sub></label><input type="number" name="d2" required id="d2"></td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>3</td>
                     <td><label for="n3">N<sub>3</sub></label><input type="number" name="n3" required id="n3"></td>
                     <td><label for="m3i">m<sub>3i</sub></label><input type="number" name="m3i" required id="m3i"></td>
                     <td><label for="m3f">m<sub>3f</sub></label><input type="number" name="m3f" required id="m3f"></td>
-                    <td><label for="d3">d<sub>3</sub></label><input type="number" name="d3" required id="d3"></td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>4</td>
                     <td><label for="n4">N<sub>4</sub></label><input type="number" name="n4" required id="n4"></td>
                     <td><label for="m4i">m<sub>4i</sub></label><input type="number" name="m4i" required id="m4i"></td>
                     <td><label for="m4f">m<sub>4f</sub></label><input type="number" name="m4f" required id="m4f"></td>
-                    <td><label for="d4">d<sub>4</sub></label><input type="number" name="d4" required id="d4"></td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>5</td>
                     <td><label for="n5">N<sub>5</sub></label><input type="number" name="n5" required id="n5"></td>
                     <td><label for="m5i">m<sub>5i</sub></label><input type="number" name="m5i" required id="m5i"></td>
                     <td><label for="m5f">m<sub>5f</sub></label><input type="number" name="m5f" required id="m5f"></td>
-                    <td><label for="d5">d<sub>5</sub></label><input type="number" name="d5" required id="d5"></td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>6</td>
                     <td><label for="n6">N<sub>6</sub></label><input type="number" name="n6" required id="n6"></td>
                     <td><label for="m6i">m<sub>6i</sub></label><input type="number" name="m6i" required id="m6i"></td>
                     <td><label for="m6f">m<sub>6f</sub></label><input type="number" name="m6f" required id="m6f"></td>
-                    <td><label for="d6">d<sub>6</sub></label><input type="number" name="d6" required id="d6"></td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>7</td>
                     <td><label for="n7">N<sub>7</sub></label><input type="number" name="n7" required id="n7"></td>
                     <td><label for="m7i">m<sub>7i</sub></label><input type="number" name="m7i" required id="m7i"></td>
                     <td><label for="m7f">m<sub>7f</sub></label><input type="number" name="m7f" required id="m7f"></td>
-                    <td><label for="d7">d<sub>7</sub></label><input type="number" name="d7" required id="d7"></td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>8</td>
                     <td><label for="n8">N<sub>8</sub></label><input type="number" name="n8" required id="n8"></td>
                     <td><label for="m8i">m<sub>8i</sub></label><input type="number" name="m8i" required id="m8i"></td>
                     <td><label for="m8f">m<sub>8f</sub></label><input type="number" name="m8f" required id="m8f"></td>
-                    <td><label for="d8">d<sub>8</sub></label><input type="number" name="d8" required id="d8"></td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>9</td>
                     <td><label for="n9">N<sub>9</sub></label><input type="number" name="n9" required id="n9"></td>
                     <td><label for="m9i">m<sub>9i</sub></label><input type="number" name="m9i" required id="m9i"></td>
                     <td><label for="m9f">m<sub>9f</sub></label><input type="number" name="m9f" required id="m9f"></td>
-                    <td><label for="d9">d<sub>9</sub></label><input type="number" name="d9" required id="d9"></td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>10</td>
                     <td><label for="n10">N<sub>10</sub></label><input type="number" name="n10" required id="n10"></td>
                     <td><label for="m10i">m<sub>10i</sub></label><input type="number" name="m10i" required id="m10i"></td>
                     <td><label for="m10f">m<sub>10f</sub></label><input type="number" name="m10f" required id="m10f"></td>
-                    <td><label for="d10">d<sub>10</sub></label><input type="number" name="d10" required id="d10"></td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>11</td>
                     <td><label for="n11">N<sub>11</sub></label><input type="number" name="n11" required id="n11"></td>
                     <td><label for="m11i">m<sub>11i</sub></label><input type="number" name="m11i" required id="m11i"></td>
                     <td><label for="m11f">m<sub>11f</sub></label><input type="number" name="m11f" required id="m11f"></td>
-                    <td><label for="d11">d<sub>11</sub></label><input type="number" name="d11" required id="d11"></td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>12</td>
                     <td><label for="n12">N<sub>12</sub></label><input type="number" name="n12" required id="n12"></td>
                     <td><label for="m12i">m<sub>12i</sub></label><input type="number" name="m12i" required id="m12i"></td>
                     <td><label for="m12f">m<sub>12f</sub></label><input type="number" name="m12f" required id="m12f"></td>
-                    <td><label for="d12">d<sub>12</sub></label><input type="number" name="d12" required id="d12"></td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>13</td>
                     <td><label for="n13">N<sub>13</sub></label><input type="number" name="n13" required id="n13"></td>
                     <td><label for="m13i">m<sub>13i</sub></label><input type="number" name="m13i" required id="m13i"></td>
                     <td><label for="m13f">m<sub>13f</sub></label><input type="number" name="m13f" required id="m13f"></td>
-                    <td><label for="d13">d<sub>13</sub></label><input type="number" name="d13" required id="d13"></td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>14</td>
                     <td><label for="n14">N<sub>14</sub></label><input type="number" name="n14" required id="n14"></td>
                     <td><label for="m14i">m<sub>14i</sub></label><input type="number" name="m14i" required id="m14i"></td>
                     <td><label for="m14f">m<sub>14f</sub></label><input type="number" name="m14f" required id="m14f"></td>
-                    <td><label for="d14">d<sub>14</sub></label><input type="number" name="d14" required id="d14"></td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>15</td>
                     <td><label for="n15">N<sub>15</sub></label><input type="number" name="n15" required id="n15"></td>
                     <td><label for="m15i">m<sub>15i</sub></label><input type="number" name="m15i" required id="m15i"></td>
                     <td><label for="m15f">m<sub>15f</sub></label><input type="number" name="m15f" required id="m15f"></td>
-                    <td><label for="d15">d<sub>15</sub></label><input type="number" name="d15" required id="d15"></td>
                 </tr>
             </tbody>
         </table>
-    </div><button  class="btn btn-primary" type="button" style="margin: 50px;font-size: 30px;box-shadow: 0px 0px 20px 4px;background: rgb(198,221,255);color: rgb(64,64,64);font-weight: bold;width: 300px;height: 60px;"><a href="Calibration const results/index.html">Submit</a> </button>
+    </div><button  class="btn btn-primary" type="submit" style="margin: 50px;font-size: 30px;box-shadow: 0px 0px 20px 4px;background: rgb(198,221,255);color: rgb(64,64,64);font-weight: bold;width: 300px;height: 60px;">Submit</button>
     </form>
     <script src="{%static 'calibration_assets/bootstrap/js/bootstrap.min.js' %}"></script>
 </body>
