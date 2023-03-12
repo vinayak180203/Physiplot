@@ -13,6 +13,8 @@
 <body class="text-center" style="background: rgba(0, 2, 45, 0);">
     <h1 class="text-center" style="color: rgba(255,255,255,0.86);">Michael Infrared</h1>
     <h3 style="color: rgba(255,255,255,0.67);">Refractive index of Transparent material</h3>
+    <p style="color: white;">Thickness of glass plate = {{ thickness }}</p>
+    <p style="color: white;">Wavelength of light = {{ wavelength }}</p>
     <div class="table-responsive text-center justify-content-xl-center align-items-xl-start" style="width: 80vw;height: 300px;color: rgb(255,255,255);margin: 30px 100px;">
         <table class="table">
             <thead style="color: rgb(255,255,255);">
@@ -21,7 +23,7 @@
                     <th>Number of Fringes moved(N)</th>
                     <th>&nbsp; &nbsp; &nbsp;Angle Rotated&nbsp; &nbsp;Left</th>
                     <th><strong>&nbsp; &nbsp; &nbsp;Angle Rotated&nbsp; &nbsp;Right</strong></th>
-                    <th>Mean.&nbsp;</th>
+                    <th>Mean&nbsp;</th>
                     <th>Refractive index&nbsp;</th>
                 </tr>
             </thead>
@@ -32,7 +34,7 @@
                     <td>{{ l1 }}</td>
                     <td>{{ r1 }}</td>
                     <td>{{ m1 }}</td>
-                    <td>Cell 6</td>
+                    <td>{{ rf1 }}</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>2</td>
@@ -40,7 +42,7 @@
                     <td>{{ l2 }}</td>
                     <td>{{ r2 }}</td>
                     <td>{{ m2 }}</td>
-                    <td>Cell 6</td>
+                    <td>{{ rf2 }}</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>3</td>
@@ -48,7 +50,7 @@
                     <td>{{ l3 }}</td>
                     <td>{{ r3 }}</td>
                     <td>{{ m3 }}</td>
-                    <td>Cell 6</td>
+                    <td>{{ rf3 }}</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>4</td>
@@ -56,7 +58,7 @@
                     <td>{{ l4 }}</td>
                     <td>{{ r4 }}</td>
                     <td>{{ m4 }}</td>
-                    <td>Cell 6</td>
+                    <td>{{ rf4 }}</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>5</td>
@@ -64,7 +66,7 @@
                     <td>{{ l5 }}</td>
                     <td>{{ r5 }}</td>
                     <td>{{ m5 }}</td>
-                    <td>Cell 6</td>
+                    <td>{{ rf5 }}</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>6</td>
@@ -72,7 +74,7 @@
                     <td>{{ l6 }}</td>
                     <td>{{ r6 }}</td>
                     <td>{{ m6 }}</td>
-                    <td>Cell 6</td>
+                    <td>{{ rf6 }}</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>7</td>
@@ -80,7 +82,7 @@
                     <td>{{ l7 }}</td>
                     <td>{{ r7 }}</td>
                     <td>{{ m7 }}</td>
-                    <td>Cell 6</td>
+                    <td>{{ rf7 }}</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>8</td>
@@ -88,7 +90,7 @@
                     <td>{{ l8 }}</td>
                     <td>{{ r8 }}</td>
                     <td>{{ m8 }}</td>
-                    <td>Cell 6</td>
+                    <td>{{ rf8 }}</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>9</td>
@@ -96,7 +98,7 @@
                     <td>{{ l9 }}</td>
                     <td>{{ r9 }}</td>
                     <td>{{ m9 }}</td>
-                    <td>Cell 6</td>
+                    <td>{{ rf9 }}</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>10</td>
@@ -104,7 +106,7 @@
                     <td>{{ l10 }}</td>
                     <td>{{ r10 }}</td>
                     <td>{{ m10 }}</td>
-                    <td>Cell 6</td>
+                    <td>{{ rf10 }}</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>11</td>
@@ -112,7 +114,7 @@
                     <td>{{ l11 }}</td>
                     <td>{{ r11 }}</td>
                     <td>{{ m11 }}</td>
-                    <td>Cell 6</td>
+                    <td>{{ rf11 }}</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>12</td>
@@ -120,7 +122,7 @@
                     <td>{{ l12 }}</td>
                     <td>{{ r12 }}</td>
                     <td>{{ m12 }}</td>
-                    <td>Cell 6</td>
+                    <td>{{ rf12 }}</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>13</td>
@@ -128,7 +130,7 @@
                     <td>{{ l13 }}</td>
                     <td>{{ r13 }}</td>
                     <td>{{ m13 }}</td>
-                    <td>Cell 6</td>
+                    <td>{{ rf13 }}</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>14</td>
@@ -136,7 +138,7 @@
                     <td>{{ l14 }}</td>
                     <td>{{ r14 }}</td>
                     <td>{{ m14 }}</td>
-                    <td>Cell 6</td>
+                    <td>{{ rf14 }}</td>
                 </tr>
                 <tr style="width: 273px;color: rgb(218,218,218);">
                     <td>15</td>
@@ -144,7 +146,7 @@
                     <td>{{ l15 }}</td>
                     <td>{{ r15 }}</td>
                     <td>{{ m15 }}</td>
-                    <td>Cell 6</td>
+                    <td>{{ rf15 }}</td>
                 </tr>
             </tbody>
         </table>
@@ -152,7 +154,7 @@
     <div class="container" style="width: 60vw;height: 5vw;">
         <div class="row">
             <div class="col-md-12">
-                <p style="color: rgb(255,255,255);font-size: 24px;">Refractive index of glass side n=</p>
+                <p style="color: rgb(255,255,255);font-size: 24px;">Refractive index of glass side n = {{ rfavg }}</p>
             </div>
         </div>
     </div>
