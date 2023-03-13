@@ -2,6 +2,11 @@ from django.template import loader
 from django.http import HttpResponse
 from django.shortcuts import render
 import math
+import os
+from django.conf import settings
+import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('Agg')
 
 # Create your views here.
 def index(request):
@@ -10,39 +15,74 @@ def index(request):
 
 def doppler(request):
     if request.method == "POST":
-        t1 = request.POST.get("t1")
-        t2 = request.POST.get("t2")
-        t3 = request.POST.get("t3")
-        t4 = request.POST.get("t4")
-        t5 = request.POST.get("t5")
-        t6 = request.POST.get("t6")
-        t7 = request.POST.get("t7")
-        t8 = request.POST.get("t8")
-        t9 = request.POST.get("t9")
-        t10 = request.POST.get("t10")
-        t11 = request.POST.get("t11")
-        t12 = request.POST.get("t12")
-        t13 = request.POST.get("t13")
-        t14 = request.POST.get("t14")
-        t15 = request.POST.get("t15")
-        f1 = request.POST.get("f1")
-        f2 = request.POST.get("f2")
-        f3 = request.POST.get("f3")
-        f4 = request.POST.get("f4")
-        f5 = request.POST.get("f5")
-        f6 = request.POST.get("f6")
-        f7 = request.POST.get("f7")
-        f8 = request.POST.get("f8")
-        f9 = request.POST.get("f9")
-        f10 = request.POST.get("f10")
-        f11 = request.POST.get("f11")
-        f12 = request.POST.get("f12")
-        f13 = request.POST.get("f13")
-        f14 = request.POST.get("f14")
-        f15 = request.POST.get("f15")
+        frequency_emitted = float(request.POST.get("frequency_emitted"))
+        t1 = float(request.POST.get("t1"))
+        t2 = float(request.POST.get("t2"))
+        t3 = float(request.POST.get("t3"))
+        t4 = float(request.POST.get("t4"))
+        t5 = float(request.POST.get("t5"))
+        t6 = float(request.POST.get("t6"))
+        t7 = float(request.POST.get("t7"))
+        t8 = float(request.POST.get("t8"))
+        t9 = float(request.POST.get("t9"))
+        t10 = float(request.POST.get("t10"))
+        t11 = float(request.POST.get("t11"))
+        t12 = float(request.POST.get("t12"))
+        t13 = float(request.POST.get("t13"))
+        t14 = float(request.POST.get("t14"))
+        t15 = float(request.POST.get("t15"))
+        f1 = float(request.POST.get("f1"))
+        f2 = float(request.POST.get("f2"))
+        f3 = float(request.POST.get("f3"))
+        f4 = float(request.POST.get("f4"))
+        f5 = float(request.POST.get("f5"))
+        f6 = float(request.POST.get("f6"))
+        f7 = float(request.POST.get("f7"))
+        f8 = float(request.POST.get("f8"))
+        f9 = float(request.POST.get("f9"))
+        f10 = float(request.POST.get("f10"))
+        f11 = float(request.POST.get("f11"))
+        f12 = float(request.POST.get("f12"))
+        f13 = float(request.POST.get("f13"))
+        f14 = float(request.POST.get("f14"))
+        f15 = float(request.POST.get("f15"))
+        v1 = ((frequency_emitted/f1)-1)*frequency_emitted
+        v2 = ((frequency_emitted/f2)-1)*frequency_emitted
+        v3 = ((frequency_emitted/f3)-1)*frequency_emitted
+        v4 = ((frequency_emitted/f4)-1)*frequency_emitted
+        v5 = ((frequency_emitted/f5)-1)*frequency_emitted
+        v6 = ((frequency_emitted/f6)-1)*frequency_emitted
+        v7 = ((frequency_emitted/f7)-1)*frequency_emitted
+        v8 = ((frequency_emitted/f8)-1)*frequency_emitted
+        v9 = ((frequency_emitted/f9)-1)*frequency_emitted
+        v10 = ((frequency_emitted/f10)-1)*frequency_emitted
+        v11 = ((frequency_emitted/f11)-1)*frequency_emitted    
+        v12 = ((frequency_emitted/f12)-1)*frequency_emitted
+        v13 = ((frequency_emitted/f13)-1)*frequency_emitted
+        v14 = ((frequency_emitted/f14)-1)*frequency_emitted
+        v15 = ((frequency_emitted/f15)-1)*frequency_emitted
+        y = [f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15]
+        v = [v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15]
+        x = [t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15]
+        fig, ax = plt.subplots()
+        ax.plot(x, y)
+        ax.set_xlabel('Time')
+        ax.set_ylabel('Frequency')
+        file_path = os.path.join(settings.MEDIA_ROOT, 'f-t.png')
+        fig.savefig(file_path)
+        v = [v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15]
+        fig, ax = plt.subplots()
+        ax.plot(x, v)
+        ax.set_xlabel('Time')
+        ax.set_ylabel('Velocity')    
+        file_path = os.path.join(settings.MEDIA_ROOT, 'v-t.png')
+        fig.savefig(file_path)
         return render(request, 'Doppler_result.html', {'t1': t1, 't2': t2, 't3': t3, 't4': t4, 't5': t5, 
                                                      't6': t6, 't7': t7, 't8': t8, 't9': t9, 't10': t10,
-                                                     't11': t11, 't12': t12, 't13': t13, 't14': t14, 't15': t15})
+                                                     't11': t11, 't12': t12, 't13': t13, 't14': t14, 't15': t15,
+                                                     'v1': v1, 'v2': v2, 'v3': v3, 'v4': v4, 'v5': v5, 
+                                                     'v6': v6, 'v7': v7, 'v8': v8, 'v9': v9, 'v10': v10,
+                                                     'v11': v11, 'v12': v12, 'v13': v13, 'v14': v14, 'v15': v15, 'ft': os.path.join(settings.MEDIA_URL, 'f-t.png'), 'vt': os.path.join(settings.MEDIA_URL, 'v-t.png')})
     else:
         template = loader.get_template('Doppler_input.html')
         return HttpResponse(template.render())

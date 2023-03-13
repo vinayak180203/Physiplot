@@ -14,6 +14,7 @@
     <h1 class="text-center" style="color: rgb(255,255,255);">Doppler effect</h1>
     <form method="post" action="">
         {% csrf_token %}
+    <label for="frequency_emitted" style="color: white;">Emitted frequency = </label><input type="number" name = 'frequency_emitted' required id="frequency_emitted">
     <div class="table-responsive text-center justify-content-xl-center align-items-xl-start" style="width: 1000px;height: 300px;color: rgb(255,255,255);margin: 30px 100px;">
         <table class="table">
             <thead style="color: rgb(255,255,255);">
