@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Solar</title>
+    <link rel="stylesheet" href="{%static 'calibration_constant_result_assets/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{%static 'solar_assets/styles.css' %}">
     <style>
         body {
@@ -21,10 +22,11 @@
     <h1 id="heading">SOLAR</h1>
     
     <div class="row">
-        <form method="post" action="">
+        <form method="post"  enctype="multipart/form-data">
             {% csrf_token %}
             <label for="image">Upload the image:</label>
-            <input type="file" id="sun_image" name="sun_image" required>
+            <input type="file" id="image" name="image" required><br>
+            <button  class="btn btn-primary" type="submit" style="margin: 50px;font-size: 30px;box-shadow: 0px 0px 20px 4px;background: rgb(198,221,255);color: rgb(64,64,64);font-weight: bold;width: 300px;height: 60px;">Submit</button>
           </form>          
     </div>
 </body>
