@@ -8,15 +8,26 @@
     <title>Untitled</title>
     <link rel="stylesheet" href="{%static 'wavelength_result_assets/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{%static 'wavelength_result_assets/css/styles.css' %}">
+    <style>
+        body {
+          background-image: url("{% static 'images/3.png' %}");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        h1 h3{
+          color: black;
+        }
+      </style>
 </head>
 
-<body class="text-center" style="background: rgba(0, 2, 45, 0);">
-    <h1 class="text-center" style="color: rgba(255,255,255,0.86);">Michael Infrared</h1>
-    <h3 style="color: rgba(255,255,255,0.67);">Calcluation of Avg Calibration constant</h3>
-    <p style="color: white;">Calibration constant for the micrometer = {{ calibration_constant }}</p>
+<body class="text-center">
+    <h1 class="text-center">Michael Infrared</h1>
+    <h3>Calcluation of Avg Calibration constant</h3>
+    <p>Calibration constant for the micrometer = {{ calibration_constant }}</p>
     <div class="table-responsive text-center justify-content-xl-center align-items-xl-start" style="width: 80vw;height: 300px;color: rgb(255,255,255);margin: 30px 100px;">
         <table class="table">
-            <thead style="color: rgb(255,255,255);">
+            <thead>
                 <tr>
                     <th>Trial number</th>
                     <th>Number of Fringes(N)</th>
@@ -27,7 +38,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>1</td>
                     <td>{{ n1 }}</td>
                     <td>{{ m1i }}</td>
@@ -35,7 +46,7 @@
                     <td>{{ d1 }}</td>
                     <td>{{ w1 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>2</td>
                     <td>{{ n2 }}</td>
                     <td>{{ m2i }}</td>
@@ -43,7 +54,7 @@
                     <td>{{ d2 }}</td>
                     <td>{{ w2 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>3</td>
                     <td>{{ n3 }}</td>
                     <td>{{ m3i }}</td>
@@ -51,7 +62,7 @@
                     <td>{{ d3 }}</td>
                     <td>{{ w3 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>4</td>
                     <td>{{ n4 }}</td>
                     <td>{{ m4i }}</td>
@@ -59,7 +70,7 @@
                     <td>{{ d4 }}</td>
                     <td>{{ w4 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>5</td>
                     <td>{{ n5 }}</td>
                     <td>{{ m5i }}</td>
@@ -67,7 +78,7 @@
                     <td>{{ d5 }}</td>
                     <td>{{ w5 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>6</td>
                     <td>{{ n6 }}</td>
                     <td>{{ m6i }}</td>
@@ -75,7 +86,7 @@
                     <td>{{ d6 }}</td>
                     <td>{{ w6 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>7</td>
                     <td>{{ n7 }}</td>
                     <td>{{ m7i }}</td>
@@ -83,7 +94,7 @@
                     <td>{{ d7 }}</td>
                     <td>{{ w7 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>8</td>
                     <td>{{ n8 }}</td>
                     <td>{{ m8i }}</td>
@@ -91,7 +102,7 @@
                     <td>{{ d8 }}</td>
                     <td>{{ w8 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>9</td>
                     <td>{{ n9 }}</td>
                     <td>{{ m9i }}</td>
@@ -99,7 +110,7 @@
                     <td>{{ d9 }}</td>
                     <td>{{ w9 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>10</td>
                     <td>{{ n10 }}</td>
                     <td>{{ m10i }}</td>
@@ -107,7 +118,7 @@
                     <td>{{ d10 }}</td>
                     <td>{{ w10 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>11</td>
                     <td>{{ n11 }}</td>
                     <td>{{ m11i }}</td>
@@ -115,7 +126,7 @@
                     <td>{{ d11 }}</td>
                     <td>{{ w11 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>12</td>
                     <td>{{ n12 }}</td>
                     <td>{{ m12i }}</td>
@@ -123,7 +134,7 @@
                     <td>{{ d12 }}</td>
                     <td>{{ w12 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>13</td>
                     <td>{{ n13 }}</td>
                     <td>{{ m13i }}</td>
@@ -131,7 +142,7 @@
                     <td>{{ d13 }}</td>
                     <td>{{ w13 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>14</td>
                     <td>{{ n14 }}</td>
                     <td>{{ m14i }}</td>
@@ -139,7 +150,7 @@
                     <td>{{ d14 }}</td>
                     <td>{{ w14 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>15</td>
                     <td>{{ n15 }}</td>
                     <td>{{ m15i }}</td>
@@ -153,7 +164,7 @@
     <div class="container" style="width: 60vw;padding-top: 0px;margin-top: 66px;font-size: 24px;">
         <div class="row">
             <div class="col-md-12">
-                <p style="color: rgb(255,255,255);">Average value of Wavelength = {{ wavg }}</p>
+                <p>Average value of Wavelength = {{ wavg }}</p>
             </div>
         </div>
     </div>
