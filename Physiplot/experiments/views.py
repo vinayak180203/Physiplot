@@ -420,7 +420,8 @@ def solar(request):
         # filename = default_storage.save(image.name, image)
         # image_url = default_storage.url(filename)
         img = cv2.imread(relative_path,0)
-        I=img[128]
+        s=img.shape[0]
+        I=img[int(s/2)]
         m=max (I)
         O=[(i/m)for i in I]
         x=np.linspace(-1,1,len (O))
@@ -429,10 +430,11 @@ def solar(request):
         file_path = os.path.join(settings.MEDIA_ROOT, 'x-O.png')
         fig.savefig(file_path)
         img1 = cv2.imread(relative_path, flags = cv2.IMREAD_GRAYSCALE)
+        s=img1.shape[0]
         a=0
-        b= max(img1[128])
+        b= max(img1[int(s/2)])
         print(b)
-        l=list(img1[128])
+        l=list(img1[int(s/2)])
         for i in l :
             k= min(l)
             if k>=10 :
