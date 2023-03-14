@@ -8,16 +8,27 @@
     <title>Doppler effect</title>
     <link rel="stylesheet" href="{%static 'Doppler_assets/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{%static 'Doppler_assets/css/styles.css' %}">
+    <style>
+        body {
+          background-image: url("{% static 'images/1.png' %}");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        h1 h3{
+          color: black;
+        }
+      </style>
 </head>
 
-<body class="text-center" style="background: rgba(0, 2, 45, 0);">
-    <h1 class="text-center" style="color: rgb(255,255,255);">Doppler effect</h1>
+<body class="text-center">
+    <h1 class="text-center">Doppler effect</h1>
     <form method="post" action="">
         {% csrf_token %}
-    <label for="frequency_emitted" style="color: white;">Emitted frequency = </label><input type="number" name = 'frequency_emitted' required id="frequency_emitted">
+    <label for="frequency_emitted">Emitted frequency = </label><input type="number" name = 'frequency_emitted' required id="frequency_emitted">
     <div class="table-responsive text-center justify-content-xl-center align-items-xl-start" style="width: 1000px;height: 300px;color: rgb(255,255,255);margin: 30px 100px;">
         <table class="table">
-            <thead style="color: rgb(255,255,255);">
+            <thead>
                 <tr>
                     <th>Time</th>
                     <th>Frequency</th>

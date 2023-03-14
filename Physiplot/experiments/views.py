@@ -4,7 +4,9 @@ from django.shortcuts import render
 import math
 import os
 from django.conf import settings
+import cv2
 import matplotlib.pyplot as plt
+import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 
@@ -384,4 +386,21 @@ def wavelength(request):
                                                      'w11': w11, 'w12': w12, 'w13': w13, 'w14': w14, 'w15': w15, 'wavg': wavg})
     else:
         template = loader.get_template('wavelength_input.html')
+        return HttpResponse(template.render()) 
+    
+def solar(request):
+    if request.method == "POST":
+        sun_image = request.POST.get("sun_image")
+        img = cv2.imread(sun_image,0)
+        I=img[128]
+        m=max (I)
+        O=[(i/m)for i in I]
+        x=np.linspace(-1,1,len (O))
+        fig, ax = plt.subplots()
+        ax.plot(x, O)
+        file_path = os.path.join(settings.MEDIA_ROOT, 'x-O.png')
+        fig.savefig(file_path)
+        return render(request, '')
+    else:
+        template = loader.get_template('solar.html')
         return HttpResponse(template.render()) 
