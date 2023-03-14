@@ -1,6 +1,9 @@
 from django.template import loader
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
+
 import math
 import os
 from django.conf import settings
@@ -8,6 +11,8 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib
+from io import BytesIO
+import image_processing
 matplotlib.use('Agg')
 
 # Create your views here.
@@ -389,9 +394,32 @@ def wavelength(request):
         return HttpResponse(template.render()) 
     
 def solar(request):
-    if request.method == "POST":
-        sun_image = request.POST.get("sun_image")
-        img = cv2.imread(sun_image,0)
+    # if request.method == "POST":
+        # image = request.POST.get("image")
+        # print(image)
+    # if request.method == 'POST' and request.FILES.get('image'):
+    #     # Read the uploaded image file into a BytesIO object
+    #     image_bytes = BytesIO(request.FILES['image'].read())
+    #     # Call the process_image() function in image_processing.py with the image data
+    #     processed_image = image_processing.process_image(image_bytes)
+    #     # Return the processed image to the user as an HTTP response
+    #     # return HttpResponse(processed_image, content_type='image/jpeg')
+    #     image = HttpResponse(processed_image, content_type='image/jpeg')
+    #     return render(request, 'solar_output.html', {'image': image})
+    # else:
+    #     template = loader.get_template('solar.html')
+    #     return HttpResponse(template.render())
+    if request.method == 'POST':
+        image = request.FILES['image']
+        file_path = os.path.join(settings.MEDIA_ROOT, image.name)
+        with open(file_path, 'wb') as f:
+            for chunk in image.chunks():
+                f.write(chunk)
+        # default_storage.save(file_path, ContentFile(image.read()))
+        relative_path = os.path.relpath(file_path, settings.BASE_DIR)
+        # filename = default_storage.save(image.name, image)
+        # image_url = default_storage.url(filename)
+        img = cv2.imread(relative_path,0)
         I=img[128]
         m=max (I)
         O=[(i/m)for i in I]
@@ -400,7 +428,30 @@ def solar(request):
         ax.plot(x, O)
         file_path = os.path.join(settings.MEDIA_ROOT, 'x-O.png')
         fig.savefig(file_path)
-        return render(request, '')
-    else:
-        template = loader.get_template('solar.html')
-        return HttpResponse(template.render()) 
+        img1 = cv2.imread(relative_path, flags = cv2.IMREAD_GRAYSCALE)
+        a=0
+        b= max(img1[128])
+        print(b)
+        l=list(img1[128])
+        for i in l :
+            k= min(l)
+            if k>=10 :
+                a=k
+            else:
+                l.remove(k)
+        alpha = a/b 
+        beta = 1 - (alpha)
+        P = [(i/m)**(0.25) for i in I]
+        y = np.linspace(-1,1,len (P))
+        q=[(w-alpha/beta) for w in P]
+        fig, ax = plt.subplots()
+        ax.plot(P, q)
+        file_path = os.path.join(settings.MEDIA_ROOT, 'P-q.png')
+        fig.savefig(file_path)
+        fig, ax = plt.subplots()
+        ax.plot(y, P)
+        file_path = os.path.join(settings.MEDIA_ROOT, 'y-P.png')
+        fig.savefig(file_path)
+        return render(request, 'solar_output.html', {'xO': os.path.join(settings.MEDIA_URL, 'x-O.png'), 'a': a, 'b': b, 'alpha': alpha, 'beta': beta, 
+                                                     'Pq': os.path.join(settings.MEDIA_URL, 'P-q.png'), 'yP': os.path.join(settings.MEDIA_URL, 'y-P.png')})
+    return render(request, 'solar.html')
