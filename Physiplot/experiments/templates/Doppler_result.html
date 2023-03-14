@@ -8,76 +8,87 @@
     <title>Doppler effect result</title>
     <link rel="stylesheet" href="{%static 'Doppler_result_assets/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{%static 'Doppler_result_assets/css/styles.css' %}">
+    <style>
+        body {
+          background-image: url("{% static 'images/1.png' %}");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        h1 h3{
+          color: black;
+        }
+      </style>
 </head>
 
-<body class="text-center" style="background: rgb(0,2,45);">
-    <h1 class="text-center" style="color: rgb(255,255,255);">Doppler effect Results</h1>
+<body class="text-center">
+    <h1 class="text-center">Doppler effect Results</h1>
     <div class="table-responsive text-center justify-content-xl-center align-items-xl-start" style="width: 80vw;height: 200px;color: rgb(255,255,255);margin: 30px 100px;">
         <table class="table">
-            <thead style="color: rgb(255,255,255);">
+            <thead>
                 <tr>
                     <th>Time</th>
                     <th>velcoity</th>
                 </tr>
             </thead>
             <tbody>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>{{ t1 }}</td>
                     <td>{{ v1 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>{{ t2 }}</td>
                     <td>{{ v2 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>{{ t3 }}</td>
                     <td>{{ v3 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>{{ t4 }}</td>
                     <td>{{ v4 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>{{ t5 }}</td>
                     <td>{{ v5 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>{{ t6 }}</td>
                     <td>{{ v6 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>{{ t7 }}</td>
                     <td>{{ v7 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>{{ t8 }}</td>
                     <td>{{ v8 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>{{ t9 }}</td>
                     <td>{{ v9 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>{{ t10 }}</td>
                     <td>{{ v10}}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>{{ t11 }}</td>
                     <td>{{ v11 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>{{ t12 }}</td>
                     <td>{{ v12 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>{{ t13 }}</td>
                     <td>{{ v13 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>{{ t14 }}</td>
                     <td>{{ v14 }}</td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>{{ t15 }}</td>
                     <td>{{ v15 }}</td>
                 </tr>
@@ -86,8 +97,8 @@
     </div>
     <div class="container" style="margin: 30px 100px;">
         <div class="row">
-            <div class="col-md-6"><img src="{{ ft }}" style="width: 40vw;"></div>
-            <div class="col-md-6"><img src="{{ vt }}" style="width: 40vw;"></div>
+            <div><img src="{{ ft }}" style="width: 40vw;"></div><br>
+            <div><img src="{{ vt }}" style="width: 40vw;"></div>
         </div>
     </div>
     <script src="{%static 'Doppler_result_assets/bootstrap/js/bootstrap.min.js' %}"></script>

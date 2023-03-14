@@ -8,17 +8,28 @@
     <title>Wavelength</title>
     <link rel="stylesheet" href="{%static 'wavelength_assets/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{%static 'wavelength_assets/css/styles.css' %}">
+    <style>
+        body {
+          background-image: url("{% static 'images/2.png' %}");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        h1 h3{
+          color: black;
+        }
+      </style>
 </head>
 
-<body class="text-center" style="background: rgba(0, 2, 45, 0);">
-    <h1 class="text-center" style="color: rgba(255,255,255,0.86);">Michael Infrared</h1>
-    <h3 style="color: rgba(255,255,255,0.67);">Calcluation of Wavelength</h3>
+<body class="text-center">
+    <h1 class="text-center">Michael Infrared</h1>
+    <h3>Calcluation of Wavelength</h3>
     <form method="post" action="">
         {% csrf_token %}
-    <label for="calibration constant" style="color: white;">Calibration constant for the micrometer = </label><input type="number" name = 'calibration_constant' required id="calibration constant">
+    <label for="calibration constant">Calibration constant for the micrometer = </label><input type="number" name = 'calibration_constant' required id="calibration constant">
     <div class="table-responsive text-center justify-content-xl-center align-items-xl-start" style="width: 80vw;height: 300px;color: rgb(255,255,255);margin: 30px 100px;">
         <table class="table">
-            <thead style="color: rgb(255,255,255);">
+            <thead>
                 <tr>
                     <th>Trial number</th>
                     <th>Number of Fringes(N)</th>
@@ -27,91 +38,91 @@
                 </tr>
             </thead>
             <tbody>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>1</td>
                     <td><label for="n1">N<sub>1</sub></label><input type="number" name="n1" required id="n1"></td>
                     <td><label for="m1i">m<sub>1i</sub></label><input type="number" name="m1i" required id="m1i"></td>
                     <td><label for="m1f">m<sub>1f</sub></label><input type="number" name="m1f" required id="m1f"></td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>2</td>
                     <td><label for="n2">N<sub>2</sub></label><input type="number" name="n2" required id="n2"></td>
                     <td><label for="m2i">m<sub>2i</sub></label><input type="number" name="m2i" required id="m2i"></td>
                     <td><label for="m2f">m<sub>2f</sub></label><input type="number" name="m2f" required id="m2f"></td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>3</td>
                     <td><label for="n3">N<sub>3</sub></label><input type="number" name="n3" required id="n3"></td>
                     <td><label for="m3i">m<sub>3i</sub></label><input type="number" name="m3i" required id="m3i"></td>
                     <td><label for="m3f">m<sub>3f</sub></label><input type="number" name="m3f" required id="m3f"></td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>4</td>
                     <td><label for="n4">N<sub>4</sub></label><input type="number" name="n4" required id="n4"></td>
                     <td><label for="m4i">m<sub>4i</sub></label><input type="number" name="m4i" required id="m4i"></td>
                     <td><label for="m4f">m<sub>4f</sub></label><input type="number" name="m4f" required id="m4f"></td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>5</td>
                     <td><label for="n5">N<sub>5</sub></label><input type="number" name="n5" required id="n5"></td>
                     <td><label for="m5i">m<sub>5i</sub></label><input type="number" name="m5i" required id="m5i"></td>
                     <td><label for="m5f">m<sub>5f</sub></label><input type="number" name="m5f" required id="m5f"></td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>6</td>
                     <td><label for="n6">N<sub>6</sub></label><input type="number" name="n6" required id="n6"></td>
                     <td><label for="m6i">m<sub>6i</sub></label><input type="number" name="m6i" required id="m6i"></td>
                     <td><label for="m6f">m<sub>6f</sub></label><input type="number" name="m6f" required id="m6f"></td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>7</td>
                     <td><label for="n7">N<sub>7</sub></label><input type="number" name="n7" required id="n7"></td>
                     <td><label for="m7i">m<sub>7i</sub></label><input type="number" name="m7i" required id="m7i"></td>
                     <td><label for="m7f">m<sub>7f</sub></label><input type="number" name="m7f" required id="m7f"></td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>8</td>
                     <td><label for="n8">N<sub>8</sub></label><input type="number" name="n8" required id="n8"></td>
                     <td><label for="m8i">m<sub>8i</sub></label><input type="number" name="m8i" required id="m8i"></td>
                     <td><label for="m8f">m<sub>8f</sub></label><input type="number" name="m8f" required id="m8f"></td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>9</td>
                     <td><label for="n9">N<sub>9</sub></label><input type="number" name="n9" required id="n9"></td>
                     <td><label for="m9i">m<sub>9i</sub></label><input type="number" name="m9i" required id="m9i"></td>
                     <td><label for="m9f">m<sub>9f</sub></label><input type="number" name="m9f" required id="m9f"></td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>10</td>
                     <td><label for="n10">N<sub>10</sub></label><input type="number" name="n10" required id="n10"></td>
                     <td><label for="m10i">m<sub>10i</sub></label><input type="number" name="m10i" required id="m10i"></td>
                     <td><label for="m10f">m<sub>10f</sub></label><input type="number" name="m10f" required id="m10f"></td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>11</td>
                     <td><label for="n11">N<sub>11</sub></label><input type="number" name="n11" required id="n11"></td>
                     <td><label for="m11i">m<sub>11i</sub></label><input type="number" name="m11i" required id="m11i"></td>
                     <td><label for="m11f">m<sub>11f</sub></label><input type="number" name="m11f" required id="m11f"></td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>12</td>
                     <td><label for="n12">N<sub>12</sub></label><input type="number" name="n12" required id="n12"></td>
                     <td><label for="m12i">m<sub>12i</sub></label><input type="number" name="m12i" required id="m12i"></td>
                     <td><label for="m12f">m<sub>12f</sub></label><input type="number" name="m12f" required id="m12f"></td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>13</td>
                     <td><label for="n13">N<sub>13</sub></label><input type="number" name="n13" required id="n13"></td>
                     <td><label for="m13i">m<sub>13i</sub></label><input type="number" name="m13i" required id="m13i"></td>
                     <td><label for="m13f">m<sub>13f</sub></label><input type="number" name="m13f" required id="m13f"></td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>14</td>
                     <td><label for="n14">N<sub>14</sub></label><input type="number" name="n14" required id="n14"></td>
                     <td><label for="m14i">m<sub>14i</sub></label><input type="number" name="m14i" required id="m14i"></td>
                     <td><label for="m14f">m<sub>14f</sub></label><input type="number" name="m14f" required id="m14f"></td>
                 </tr>
-                <tr style="width: 273px;color: rgb(218,218,218);">
+                <tr style="width: 273px">
                     <td>15</td>
                     <td><label for="n15">N<sub>15</sub></label><input type="number" name="n15" required id="n15"></td>
                     <td><label for="m15i">m<sub>15i</sub></label><input type="number" name="m15i" required id="m15i"></td>
