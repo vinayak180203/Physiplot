@@ -2,13 +2,13 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 img = cv2.imread('12141630.jpg',flags = cv2.IMREAD_GRAYSCALE)
-print(img.shape)
-print(img[128])
+s=img.shape[0]
+print(int(s/2))
 
 a=0
-b= max(img[128])
+b= max(img[int(s/2)])
 print(b)
-l=list(img[128])
+l=list(img[int(s/2)])
 for i in l :
     k= min(l)
     if k>=10 :
@@ -22,7 +22,7 @@ alpha = a/b
 beta = 1 - (alpha )
 
 img = cv2.imread ('12141630.jpg',0)
-I=img[128]
+I=img[int(s/2)]
 m=max (I)
 O=[(i/m)**(0.25) for i in I]
 x=np.linspace(-1,1,len (O))
