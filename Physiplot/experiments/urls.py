@@ -10,6 +10,7 @@ urlpatterns = [
     path('infrared/calibration/', views.calibrationconstant, name = 'calibration constant'),
     path('infrared/refractiveindex/', views.refractiveindex, name = 'refractive index'),
     path('infrared/wavelength/', views.wavelength, name = 'wavelength'),
+    path('solar/', views.solar, name = 'solar'),
 
     #  path('agentlogin',views.agentlogin, name="agentlogin"),
     # path('insurance',views.insurance, name="insurance"),

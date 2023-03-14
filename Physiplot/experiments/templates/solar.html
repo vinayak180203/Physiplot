@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Michael Infrared</title>
-    <link rel="stylesheet" href="{%static 'Infrared_assets/style.css' %}">
+    <title>Solar</title>
+    <link rel="stylesheet" href="{%static 'solar_assets/styles.css' %}">
     <style>
         body {
           background-image: url("{% static 'images/1.png' %}");
@@ -18,16 +18,14 @@
       </style>
 </head>
 <body>
-    <h1 id="heading">PHYSIPLOT</h1>
+    <h1 id="heading">SOLAR</h1>
     
     <div class="row">
-        
-          
-          <a href="calibration/"><h2>Calibration constant</h2></a>
-
-          <a href="refractiveindex/"><h2>Refractive index</h2></a>
-
-          <a href="wavelength/"><h2>Wavelength</h2></a>
+        <form method="post" action="">
+            {% csrf_token %}
+            <label for="image">Upload the image:</label>
+            <input type="file" id="sun_image" name="sun_image" required>
+          </form>          
     </div>
 </body>
 </html>
